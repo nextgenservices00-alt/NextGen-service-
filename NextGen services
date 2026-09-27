@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextGen Service | Teenage Consultancy & MUN</title>
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --secondary: #06b6d4;
+      --accent: #f59e0b;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--secondary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      color: white;
+      padding: 180px 2rem 100px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      background: rgba(79, 70, 229, 0.3);
+      border: 1px solid var(--primary);
+      color: #a5b4fc;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--secondary);
+      color: var(--dark);
+      transform: translateY(-2px);
+    }
+
+    /* Founder Section */
+    .founder-section {
+      max-width: 1200px;
+      margin: -50px auto 4rem;
+      background: #fff;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .founder-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .founder-info h3 {
+      font-size: 1.8rem;
+      color: var(--dark);
+    }
+
+    .founder-title {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Sections Shared Styles */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.3rem;
+      color: var(--dark);
+    }
+
+    .section-title p {
+      color: #64748b;
+    }
+
+    /* Grid Layout for Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      color: var(--dark);
+    }
+
+    .price-tag {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.5rem 0;
+    }
+
+    /* MUN Section */
+    .mun-banner {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      color: white;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .mun-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .mun-price-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 2rem;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    /* Form Container */
+    .form-container {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .form-container iframe {
+      width: 100%;
+      min-height: 600px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 3rem 2rem 1.5rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    footer p {
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .founder-section { flex-direction: column; text-align: center; }
+      .mun-content { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">NextGen <span>Service</span></a>
+      <nav>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services & Pricing</a></li>
+          <li><a href="#mun">NextGen MUN</a></li>
+          <li><a href="#enroll">Enroll Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge"><i class="fa-solid fa-star"></i> Ultimate Teenage Mentorship & Guidance</span>
+      <h1>Empowering Teenagers to Solve Any Challenge</h1>
+      <p>Academic stress, career guidance, personal conflicts, or skill development — NextGen Service is your trusted consultancy partner.</p>
+      <div>
+        <a href="#services" class="btn btn-primary">Our Services</a>
+        <a href="#mun" class="btn btn-secondary">Explore MUN 2026</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <div class="founder-section" id="about">
+    <div class="founder-img">
+      <i class="fa-solid fa-user-tie"></i>
+    </div>
+    <div class="founder-info">
+      <h3>Shreyash Dutta</h3>
+      <p class="founder-title">Founder & CEO, NextGen Service</p>
+      <p>"Teenage is the most crucial phase of life. At NextGen Service, our mission is to listen, guide, and empower teenagers to solve their problems confidently and unlock their full potential."</p>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-title">
+      <h2>Consultancy Services</h2>
+      <p>Tailored solutions and personal support designed specifically for teenagers</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="card">
+        <div>
+          <div class="card-icon"><i class="fa-solid fa-compass"></i></div>
+          <h3>Career & Academic Guidance</h3>
+          <p>Confused about stream selection, college options, or study plans? Get 1-on-1 expert clarity.</p>
+        </div>
+        <div>
+          <div class="price-tag" id="price-career">₹499</div>
+          <a href="#enroll" class="btn btn-primary" style="width: 100%; text-align: center;">Book Session</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="card">
+        <div>
+          <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Personal Mentorship & Problem Solving</h3>
+          <p>Safe space to discuss personal conflicts, stress, or peer pressure with actionable guidance.</p>
+        </div>
+        <div>
+          <div class="price-tag" id="price-personal">₹799</div>
+          <a href="#enroll" class="btn btn-primary" style="width: 100%; text-align: center;">Book Session</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="card">
+        <div>
+          <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Skill & Leadership Development</h3>
+          <p>Public speaking, time management, confidence building, and networking mastery for youth.</p>
+        </div>
+        <div>
+          <div class="price-tag" id="price-skill">₹599</div>
+          <a href="#enroll" class="btn btn-primary" style="width: 100%; text-align: center;">Book Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUN Section -->
+  <section id="mun">
+    <div class="section-title">
+      <h2>NextGen Model United Nations (MUN)</h2>
+      <p>Debate, Diplomacy, and Leadership — Step onto the global stage</p>
+    </div>
+
+    <div class="mun-banner">
+      <div class="mun-content">
+        <div>
+          <span style="color: var(--secondary); font-weight: 600;">#NextGenMUN2026</span>
+          <h2 style="font-size: 2rem; margin: 0.5rem 0 1rem;">Develop Diplomacy & Global Problem Solving</h2>
+          <p style="color: #cbd5e1; margin-bottom: 1.5rem;">Join delegates from across the nation to debate pressing international issues, draft resolutions, and win prestige, certificates, and trophies!</p>
+          <ul>
+            <li><i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> UN Security Council & General Assembly committees</li>
+            <li><i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Beginner-friendly training sessions included</li>
+            <li><i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Official Certificates & Awards for Best Delegates</li>
+          </ul>
+        </div>
+
+        <div class="mun-price-card">
+          <p style="color: #cbd5e1;">Delegate Registration Fee</p>
+          <div class="price-tag" style="color: #fff; margin: 1rem 0;" id="price-mun">₹299</div>
+          <a href="#enroll" class="btn btn-secondary" style="width: 100%; text-align: center;">Register Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Form Section -->
+    <div class="form-container" id="enroll">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h3>Enrollment & Registration Form</h3>
+        <p style="color: #64748b;">Fill out the form below to participate in our Consultancy Services or NextGen MUN</p>
+      </div>
+
+      <!-- Google Form Embed Placeholder -->
+      <div id="form-wrapper">
+        <iframe id="google-form-iframe" src="" loading="lazy">Loading Google Form...</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <strong>NextGen Service</strong>. All Rights Reserved.</p>
+    <p>Founded & Managed by <strong>Shreyash Dutta</strong> (Founder & CEO)</p>
+  </footer>
+
+  <!-- JS Easy Configuration -->
+  <script>
+    // ===================================================
+    // 🛠️ EASY EDIT CONFIGURATION FOR SHREYASH DUTTA
+    // Yaha se tum bina kisi trouble ke saare prices & Google Form Link change kar sakte ho:
+    // ===================================================
+    const WEBSITE_CONFIG = {
+      // 1. Consultancy Services Prices
+      careerGuidancePrice: "₹499",
+      personalMentorshipPrice: "₹799",
+      skillBuildingPrice: "₹599",
+
+      // 2. MUN Registration Fee
+      munDelegateFee: "₹299",
+
+      // 3. Google Form URL (Inverted commas me apna Google Form View Link daalo)
+      // Tip: Google Form -> Send -> Embed HTML / Link paste karein
+      googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORM_ID/viewform?embedded=true"
+    };
+
+    // Auto-update Website content on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("price-career").innerText = WEBSITE_CONFIG.careerGuidancePrice;
+      document.getElementById("price-personal").innerText = WEBSITE_CONFIG.personalMentorshipPrice;
+      document.getElementById("price-skill").innerText = WEBSITE_CONFIG.skillBuildingPrice;
+      document.getElementById("price-mun").innerText = WEBSITE_CONFIG.munDelegateFee;
+      
+      const iframe = document.getElementById("google-form-iframe");
+      if (WEBSITE_CONFIG.googleFormUrl) {
+        iframe.src = WEBSITE_CONFIG.googleFormUrl;
+      }
+    });
+  </script>
+</body>
+</html>
