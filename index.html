@@ -2,490 +2,527 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NextGen Service | Teenage Consultancy & MUN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NextGen Service | Teen Consultancy & MUN</title>
   <!-- Google Fonts & FontAwesome Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
     :root {
       --primary: #4f46e5;
       --primary-hover: #4338ca;
       --secondary: #06b6d4;
-      --accent: #f59e0b;
       --dark: #0f172a;
       --light: #f8fafc;
-      --card-bg: #ffffff;
+      --card-bg: rgba(255, 255, 255, 0.9);
       --text: #334155;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: var(--light);
+      background-color: #f1f5f9;
       color: var(--text);
       line-height: 1.6;
     }
 
     /* Navbar */
     header {
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      position: fixed;
+      position: sticky;
       top: 0;
-      width: 100%;
       z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      padding: 1rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .logo {
       font-size: 1.5rem;
-      font-weight: 700;
+      font-weight: 800;
       color: #fff;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .logo span {
       color: var(--secondary);
     }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: #cbd5e1;
+    .nav-btn {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
     }
 
-    nav a:hover {
-      color: var(--secondary);
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
     }
 
     /* Hero Section */
     .hero {
       background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      color: white;
-      padding: 180px 2rem 100px;
+      color: #fff;
+      padding: 5rem 5% 4rem;
       text-align: center;
       position: relative;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
+      overflow: hidden;
     }
 
     .badge {
-      background: rgba(79, 70, 229, 0.3);
-      border: 1px solid var(--primary);
-      color: #a5b4fc;
-      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.4rem 1.2rem;
       border-radius: 50px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--secondary);
       display: inline-block;
       margin-bottom: 1.5rem;
     }
 
     .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
+      font-size: 2.8rem;
+      font-weight: 800;
       margin-bottom: 1rem;
       line-height: 1.2;
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #94a3b8;
-      margin-bottom: 2rem;
+      max-width: 650px;
+      margin: 0 auto 2rem;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s;
-      cursor: pointer;
+    .hero-btns {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .btn-primary {
       background: var(--primary);
-      color: white;
-      margin-right: 1rem;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-hover);
-      transform: translateY(-2px);
+      color: #fff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
     }
 
     .btn-secondary {
-      border: 2px solid var(--secondary);
-      color: var(--secondary);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: 0.3s;
     }
 
-    .btn-secondary:hover {
-      background: var(--secondary);
-      color: var(--dark);
-      transform: translateY(-2px);
-    }
-
-    /* Founder Section */
-    .founder-section {
-      max-width: 1200px;
-      margin: -50px auto 4rem;
-      background: #fff;
-      border-radius: 16px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    /* Stats Bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: -2.5rem auto 3rem;
+      padding: 0 5%;
       position: relative;
       z-index: 10;
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
     }
 
-    .founder-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      color: white;
-      flex-shrink: 0;
+    .stat-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
-    .founder-info h3 {
+    .stat-card h3 {
       font-size: 1.8rem;
-      color: var(--dark);
-    }
-
-    .founder-title {
       color: var(--primary);
+      font-weight: 800;
+    }
+
+    .stat-card p {
+      font-size: 0.85rem;
+      color: #64748b;
       font-weight: 600;
-      margin-bottom: 0.8rem;
     }
 
-    /* Sections Shared Styles */
-    section {
-      padding: 5rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
+    /* Section Headers */
     .section-title {
       text-align: center;
-      margin-bottom: 3rem;
+      margin: 3rem 0 2rem;
+      padding: 0 5%;
     }
 
     .section-title h2 {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       color: var(--dark);
+      font-weight: 800;
     }
 
     .section-title p {
       color: #64748b;
     }
 
-    /* Grid Layout for Services */
-    .services-grid {
+    /* Services Grid */
+    .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 0 5%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .card {
-      background: var(--card-bg);
-      border-radius: 16px;
+      background: #fff;
+      border-radius: 20px;
       padding: 2rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
       border: 1px solid #e2e8f0;
-      transition: transform 0.3s;
+      transition: 0.3s;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border-color: var(--primary);
     }
 
     .card-icon {
-      font-size: 2.5rem;
+      width: 50px;
+      height: 50px;
+      background: #eef2ff;
       color: var(--primary);
-      margin-bottom: 1rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
     }
 
     .card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
       color: var(--dark);
     }
 
-    .price-tag {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin: 1.5rem 0;
+    .card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 1.5rem;
     }
 
-    /* MUN Section */
-    .mun-banner {
-      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-      color: white;
-      border-radius: 20px;
-      padding: 3rem 2rem;
-      margin-bottom: 3rem;
+    .price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 1.2rem;
     }
 
-    .mun-content {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .mun-price-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 2rem;
-      border-radius: 16px;
+    .card-btn {
+      display: block;
       text-align: center;
+      background: var(--dark);
+      color: #fff;
+      padding: 0.7rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
     }
 
-    /* Form Container */
-    .form-container {
-      background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border: 1px solid #e2e8f0;
+    .card-btn:hover {
+      background: var(--primary);
     }
 
-    .form-container iframe {
-      width: 100%;
-      min-height: 600px;
-      border: none;
+    /* FAQ Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      padding: 0 5%;
+    }
+
+    .faq-item {
+      background: #fff;
       border-radius: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--dark);
+    }
+
+    .faq-answer {
+      padding: 0 1.2rem 1.2rem;
+      color: #64748b;
+      font-size: 0.95rem;
+      display: none;
+    }
+
+    /* Floating Instagram Button */
+    .insta-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 32px;
+      box-shadow: 0 5px 20px rgba(220, 39, 67, 0.4);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .insta-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(220, 39, 67, 0.6);
     }
 
     /* Footer */
     footer {
       background: var(--dark);
       color: #94a3b8;
-      padding: 3rem 2rem 1.5rem;
       text-align: center;
-      margin-top: 4rem;
+      padding: 3rem 5%;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     footer p {
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .founder-section { flex-direction: column; text-align: center; }
-      .mun-content { grid-template-columns: 1fr; }
-      nav ul { display: none; }
+    /* Registration Section */
+    .form-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 5%;
+    }
+
+    .form-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Header / Navbar -->
   <header>
-    <div class="nav-container">
-      <a href="#" class="logo">NextGen <span>Service</span></a>
-      <nav>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services & Pricing</a></li>
-          <li><a href="#mun">NextGen MUN</a></li>
-          <li><a href="#enroll">Enroll Now</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a href="#" class="logo">NextGen<span>Service</span></a>
+    <a href="#register" class="nav-btn">Enroll Now</a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <span class="badge"><i class="fa-solid fa-star"></i> Ultimate Teenage Mentorship & Guidance</span>
-      <h1>Empowering Teenagers to Solve Any Challenge</h1>
-      <p>Academic stress, career guidance, personal conflicts, or skill development — NextGen Service is your trusted consultancy partner.</p>
-      <div>
-        <a href="#services" class="btn btn-primary">Our Services</a>
-        <a href="#mun" class="btn btn-secondary">Explore MUN 2026</a>
-      </div>
+    <div class="badge">🚀 Founded by Shreyash Dutta</div>
+    <h1>Empowering Teenagers for Career, Growth & Diplomacy</h1>
+    <p>Personalized mentorship, academic & skill guidance, and high-impact Model United Nations (MUN) experiences designed specifically for youth.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">Explore Services</a>
+      <a href="#register" class="btn-secondary">Register for MUN</a>
     </div>
   </section>
 
-  <!-- Founder Section -->
-  <div class="founder-section" id="about">
-    <div class="founder-img">
-      <i class="fa-solid fa-user-tie"></i>
+  <!-- Impact Stats -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <h3>100+</h3>
+      <p>Youth Mentored</p>
     </div>
-    <div class="founder-info">
-      <h3>Shreyash Dutta</h3>
-      <p class="founder-title">Founder & CEO, NextGen Service</p>
-      <p>"Teenage is the most crucial phase of life. At NextGen Service, our mission is to listen, guide, and empower teenagers to solve their problems confidently and unlock their full potential."</p>
+    <div class="stat-card">
+      <h3>4</h3>
+      <p>MUN Committees</p>
+    </div>
+    <div class="stat-card">
+      <h3>1-on-1</h3>
+      <p>Personal Guidance</p>
     </div>
   </div>
 
   <!-- Services Section -->
   <section id="services">
     <div class="section-title">
-      <h2>Consultancy Services</h2>
-      <p>Tailored solutions and personal support designed specifically for teenagers</p>
+      <h2>Our Core Services</h2>
+      <p>Choose the guidance or event tailored to your personal goals</p>
     </div>
 
-    <div class="services-grid">
+    <div class="grid-container">
       <!-- Service 1 -->
       <div class="card">
         <div>
-          <div class="card-icon"><i class="fa-solid fa-compass"></i></div>
-          <h3>Career & Academic Guidance</h3>
-          <p>Confused about stream selection, college options, or study plans? Get 1-on-1 expert clarity.</p>
+          <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Career & Academics</h3>
+          <p>Stream selection, exam preparation tactics, and high school trajectory planning.</p>
         </div>
         <div>
-          <div class="price-tag" id="price-career">₹499</div>
-          <a href="#enroll" class="btn btn-primary" style="width: 100%; text-align: center;">Book Session</a>
+          <div class="price">₹499</div>
+          <a href="#register" class="card-btn">Enroll Now</a>
         </div>
       </div>
 
       <!-- Service 2 -->
       <div class="card">
         <div>
-          <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
-          <h3>Personal Mentorship & Problem Solving</h3>
-          <p>Safe space to discuss personal conflicts, stress, or peer pressure with actionable guidance.</p>
+          <div class="card-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+          <h3>Personal Mentorship</h3>
+          <p>Direct 1-on-1 problem solving for stress, habit building, and clarity.</p>
         </div>
         <div>
-          <div class="price-tag" id="price-personal">₹799</div>
-          <a href="#enroll" class="btn btn-primary" style="width: 100%; text-align: center;">Book Session</a>
+          <div class="price">₹799</div>
+          <a href="#register" class="card-btn">Enroll Now</a>
         </div>
       </div>
 
       <!-- Service 3 -->
       <div class="card">
         <div>
-          <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Skill & Leadership Development</h3>
-          <p>Public speaking, time management, confidence building, and networking mastery for youth.</p>
+          <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3>Skill Development</h3>
+          <p>Public speaking, communication, leadership, and portfolio building.</p>
         </div>
         <div>
-          <div class="price-tag" id="price-skill">₹599</div>
-          <a href="#enroll" class="btn btn-primary" style="width: 100%; text-align: center;">Book Session</a>
+          <div class="price">₹599</div>
+          <a href="#register" class="card-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="card" style="border: 2px solid var(--primary);">
+        <div>
+          <div class="card-icon"><i class="fa-solid fa-landmark"></i></div>
+          <h3>NextGen MUN</h3>
+          <p>Participate in UNICEF, UNGA-DISEC, AIPPM, or IP committees to master diplomacy.</p>
+        </div>
+        <div>
+          <div class="price">₹299</div>
+          <a href="#register" class="card-btn" style="background: var(--primary);">Register Delegate</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MUN Section -->
-  <section id="mun">
+  <!-- FAQ Section -->
+  <section style="margin-top: 4rem;">
     <div class="section-title">
-      <h2>NextGen Model United Nations (MUN)</h2>
-      <p>Debate, Diplomacy, and Leadership — Step onto the global stage</p>
+      <h2>Frequently Asked Questions</h2>
+      <p>Got questions? We've got answers.</p>
     </div>
 
-    <div class="mun-banner">
-      <div class="mun-content">
-        <div>
-          <span style="color: var(--secondary); font-weight: 600;">#NextGenMUN2026</span>
-          <h2 style="font-size: 2rem; margin: 0.5rem 0 1rem;">Develop Diplomacy & Global Problem Solving</h2>
-          <p style="color: #cbd5e1; margin-bottom: 1.5rem;">Join delegates from across the nation to debate pressing international issues, draft resolutions, and win prestige, certificates, and trophies!</p>
-          <ul>
-            <li><i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> UN Security Council & General Assembly committees</li>
-            <li><i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Beginner-friendly training sessions included</li>
-            <li><i class="fa-solid fa-check-circle" style="color: var(--secondary);"></i> Official Certificates & Awards for Best Delegates</li>
-          </ul>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What happens after I register? <i class="fa-solid fa-chevron-down"></i>
         </div>
-
-        <div class="mun-price-card">
-          <p style="color: #cbd5e1;">Delegate Registration Fee</p>
-          <div class="price-tag" style="color: #fff; margin: 1rem 0;" id="price-mun">₹299</div>
-          <a href="#enroll" class="btn btn-secondary" style="width: 100%; text-align: center;">Register Now</a>
+        <div class="faq-answer">
+          Our team will reach out to you within 24 hours to confirm your registration and share session schedules or MUN committee allocations.
         </div>
       </div>
-    </div>
 
-    <!-- Google Form Section -->
-    <div class="form-container" id="enroll">
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <h3>Enrollment & Registration Form</h3>
-        <p style="color: #64748b;">Fill out the form below to participate in our Consultancy Services or NextGen MUN</p>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Is NextGen MUN suitable for complete beginners? <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes! We offer beginner-friendly committees like UNICEF and provide orientation materials so first-time delegates feel confident.
+        </div>
       </div>
 
-      <!-- Google Form Embed Placeholder -->
-      <div id="form-wrapper">
-        <iframe id="google-form-iframe" src="" loading="lazy">Loading Google Form...</iframe>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How are 1-on-1 Mentorship sessions conducted? <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Mentorship sessions take place via Google Meet or Phone Call at a scheduled time that suits your study routine.
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Google Form Embedded Section -->
+  <section id="register" class="form-section">
+    <div class="section-title">
+      <h2>Registration Portal</h2>
+      <p>Fill out the form below to confirm your spot</p>
+    </div>
+    <div class="form-card">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc47vlVvkxKnGnzSupmYQ54J2FgCIH0PFaGGqk1JGa0KK0bHQ/viewform?embedded=true">Loading…</iframe>
+    </div>
+  </section>
+
+  <!-- Floating Instagram Button -->
+  <a href="https://instagram.com/https://www.instagram.com/_nextgen_services_?stkn=NXkwdnhyeTlzemJ3" class="insta-float" target="_blank" title="Follow us on Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 <strong>NextGen Service</strong>. All Rights Reserved.</p>
-    <p>Founded & Managed by <strong>Shreyash Dutta</strong> (Founder & CEO)</p>
+    <p>&copy; 2026 NextGen Service. All Rights Reserved. Founded by Shreyash Dutta.</p>
   </footer>
 
-  <!-- JS Easy Configuration -->
   <script>
-    // ===================================================
-    // 🛠️ EASY EDIT CONFIGURATION FOR SHREYASH DUTTA
-    // Yaha se tum bina kisi trouble ke saare prices & Google Form Link change kar sakte ho:
-    // ===================================================
-    const WEBSITE_CONFIG = {
-  careerGuidancePrice: "₹499",
-  personalMentorshipPrice: "₹799",
-  skillBuildingPrice: "₹599",
-  munDelegateFee: "₹299",
-
-  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc47vlVvkxKnGnzSupmYQ54J2FgCIH0PFaGGqk1JGa0KK0bHQ/viewform?embedded=true"
-};
-    
-  
-
-    // Auto-update Website content on page load
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("price-career").innerText = WEBSITE_CONFIG.careerGuidancePrice;
-      document.getElementById("price-personal").innerText = WEBSITE_CONFIG.personalMentorshipPrice;
-      document.getElementById("price-skill").innerText = WEBSITE_CONFIG.skillBuildingPrice;
-      document.getElementById("price-mun").innerText = WEBSITE_CONFIG.munDelegateFee;
-      
-      const iframe = document.getElementById("google-form-iframe");
-      if (WEBSITE_CONFIG.googleFormUrl) {
-        iframe.src = WEBSITE_CONFIG.googleFormUrl;
-      }
-    });
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const isVisible = answer.style.display === "block";
+      document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none');
+      answer.style.display = isVisible ? "none" : "block";
+    }
   </script>
 </body>
-  </html>
-  
+</html>
+
