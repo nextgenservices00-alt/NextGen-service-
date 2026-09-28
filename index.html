@@ -18,7 +18,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -30,8 +30,8 @@
     }
 
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
+      background-color: #ffffff;
+      color: #1e293b;
       line-height: 1.6;
     }
 
@@ -40,13 +40,13 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
       padding: 12px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     .logo-container {
@@ -57,22 +57,22 @@
     }
 
     .logo-img {
-      width: 42px;
-      height: 42px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #3b82f6;
+      border: 1px solid #cbd5e1;
     }
 
     .logo-text {
       font-size: 20px;
       font-weight: 800;
-      color: #fff;
+      color: #0f172a;
       letter-spacing: -0.5px;
     }
 
     .logo-text span {
-      color: #3b82f6;
+      color: #2563eb;
     }
 
     nav {
@@ -82,24 +82,23 @@
     }
 
     nav a {
-      color: #94a3b8;
+      color: #475569;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     nav a:hover {
-      color: #3b82f6;
+      color: #2563eb;
     }
 
     .nav-btn {
       background: #2563eb;
-      color: #fff !important;
+      color: #ffffff !important;
       padding: 8px 18px;
       border-radius: 6px;
       font-weight: 600;
-      transition: 0.3s;
     }
 
     .nav-btn:hover {
@@ -108,237 +107,199 @@
 
     /* ===== HERO SECTION ===== */
     .hero {
-      padding: 80px 20px 60px;
+      padding: 60px 20px 40px;
       text-align: center;
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     .hero-badge {
       display: inline-block;
-      background: rgba(59, 130, 246, 0.1);
-      color: #60a5fa;
-      border: 1px solid rgba(59, 130, 246, 0.3);
+      background: #eff6ff;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
       padding: 6px 16px;
       border-radius: 20px;
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 38px;
       font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 20px;
+      color: #0f172a;
+      line-height: 1.25;
+      margin-bottom: 16px;
     }
 
     .hero h1 span {
-      background: linear-gradient(90deg, #60a5fa, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #2563eb;
     }
 
     .hero p {
-      font-size: 18px;
-      color: #94a3b8;
-      margin-bottom: 30px;
+      font-size: 17px;
+      color: #64748b;
+      margin-bottom: 24px;
     }
 
     .cta-btn {
       display: inline-block;
       background: #2563eb;
-      color: #fff;
-      padding: 14px 32px;
-      border-radius: 8px;
+      color: #ffffff;
+      padding: 12px 28px;
+      border-radius: 6px;
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 700;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-      transition: 0.3s;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s;
     }
 
     .cta-btn:hover {
       background: #1d4ed8;
-      transform: translateY(-2px);
     }
 
-    /* ===== CORE PILLARS ===== */
-    .pillars {
-      padding: 60px 20px;
-      background: #1e293b;
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 50px 20px;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
+      border-bottom: 1px solid #f1f5f9;
     }
 
     .section-title {
       text-align: center;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
-      margin-bottom: 10px;
+      color: #0f172a;
+      margin-bottom: 8px;
     }
 
     .section-subtitle {
       text-align: center;
-      color: #94a3b8;
+      color: #64748b;
       font-size: 15px;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .grid-container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
 
     .card {
-      background: #0f172a;
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid #334155;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
 
     .card-icon {
-      font-size: 28px;
-      margin-bottom: 15px;
+      font-size: 26px;
+      margin-bottom: 12px;
     }
 
     .card h3 {
-      font-size: 20px;
-      color: #60a5fa;
-      margin-bottom: 10px;
+      font-size: 18px;
+      color: #0f172a;
+      margin-bottom: 8px;
     }
 
     .card p {
-      color: #94a3b8;
+      color: #64748b;
       font-size: 14px;
     }
 
-    /* ===== FOUNDER SECTION ===== */
+    /* ===== FOUNDER ===== */
     .founder {
-      padding: 70px 20px;
-      max-width: 800px;
+      padding: 50px 20px;
+      max-width: 750px;
       margin: 0 auto;
       text-align: center;
     }
 
     .founder-img {
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto 20px;
-      border: 3px solid #3b82f6;
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      margin: 0 auto 16px;
+      border: 2px solid #2563eb;
     }
 
     .founder h3 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
+      color: #0f172a;
     }
 
     .founder-title {
-      color: #3b82f6;
-      font-size: 14px;
+      color: #2563eb;
+      font-size: 13px;
       font-weight: 600;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .founder-quote {
-      color: #cbd5e1;
+      color: #475569;
       font-style: italic;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    /* ===== FAQ SECTION ===== */
-    .faqs {
-      padding: 60px 20px;
-      background: #1e293b;
-    }
-
-    .faq-container {
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    details {
-      background: #0f172a;
-      padding: 16px 20px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      border: 1px solid #334155;
-      cursor: pointer;
-    }
-
-    summary {
-      font-weight: 600;
-      color: #f1f5f9;
-    }
-
-    details p {
-      margin-top: 12px;
-      color: #94a3b8;
-      font-size: 14px;
+      font-size: 15px;
+      line-height: 1.6;
     }
 
     /* ===== ENROLLMENT FORM ===== */
     .enroll {
-      padding: 70px 20px;
+      padding: 50px 20px;
+      background: #f8fafc;
       text-align: center;
+      border-top: 1px solid #f1f5f9;
     }
 
     .form-box {
-      max-width: 750px;
+      max-width: 700px;
       margin: 20px auto 0;
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #334155;
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
     }
 
     iframe {
       width: 100%;
       height: 600px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
     }
 
-    /* ===== FLOATING INSTAGRAM BUTTON ===== */
+    /* ===== FLOATING INSTAGRAM ===== */
     .floating-ig {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 30px;
+      bottom: 20px;
+      right: 20px;
+      background: #e1306c;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 25px;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       z-index: 1000;
-      transition: 0.3s;
     }
 
-    .floating-ig:hover {
-      transform: scale(1.05);
-    }
-
-    /* Responsive */
     @media (max-width: 600px) {
       nav { display: none; }
-      .hero h1 { font-size: 30px; }
-      .hero p { font-size: 15px; }
+      .hero h1 { font-size: 28px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== NAVBAR WITH LOGO ===== -->
+  <!-- NAVBAR -->
   <header>
     <a href="https://nextgenservices00-alt.github.io/NextGen-service-/" class="logo-container">
       <img src="logo.png" alt="NextGen Logo" class="logo-img">
@@ -349,12 +310,11 @@
       <a href="https://nextgenservices00-alt.github.io/NextGen-service-/">Home</a>
       <a href="#services">Services</a>
       <a href="#founder">About Founder</a>
-      <a href="#faqs">FAQs</a>
       <a href="#enroll" class="nav-btn">Enroll Now</a>
     </nav>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-badge">🚀 Teen Consultancy & MUN Platform</div>
     <h1>Empowering Teenagers to <span>Lead, Speak, & Excel</span></h1>
@@ -362,8 +322,8 @@
     <a href="#enroll" class="cta-btn">Get Started Today</a>
   </section>
 
-  <!-- ===== CORE PILLARS ===== -->
-  <section class="pillars" id="services">
+  <!-- SERVICES -->
+  <section class="services" id="services">
     <h2 class="section-title">Why Choose NextGen Service?</h2>
     <p class="section-subtitle">Real skills, practical exposure, and personalized guidance.</p>
     
@@ -388,7 +348,7 @@
     </div>
   </section>
 
-  <!-- ===== FOUNDER SPOTLIGHT ===== -->
+  <!-- FOUNDER SECTION -->
   <section class="founder" id="founder">
     <img src="logo.png" alt="Shreyash Dutta" class="founder-img">
     <h3>Shreyash Dutta</h3>
@@ -398,41 +358,18 @@
     </p>
   </section>
 
-  <!-- ===== FAQ SECTION ===== -->
-  <section class="faqs" id="faqs">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <p class="section-subtitle">Got questions? We've got answers.</p>
-
-    <div class="faq-container">
-      <details>
-        <summary>What is NextGen Service all about?</summary>
-        <p>NextGen Service provides mentorship, skill development, career guidance, and Model United Nations (MUN) training specifically curated for teenagers and students.</p>
-      </details>
-
-      <details>
-        <summary>Can beginners join NextGen MUN workshops?</summary>
-        <p>Yes! We have specialized beginner-friendly tracks where we teach rules of procedure, research methods, and public speaking from scratch.</p>
-      </details>
-
-      <details>
-        <summary>How can I enroll in mentorship?</summary>
-        <p>Simply scroll down to the enrollment form below, fill in your details, and our team will get in touch with you within 24 hours.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- ===== ENROLLMENT FORM SECTION ===== -->
+  <!-- ENROLLMENT FORM SECTION -->
   <section class="enroll" id="enroll">
     <h2 class="section-title">Start Your Journey</h2>
     <p class="section-subtitle">Fill out the enrollment form below to get connected with us.</p>
     
     <div class="form-box">
-      <!-- Google Form Embed -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScX0Y6I7kS2jS8Xo5J0e44E-2l3L1R0G4M/viewform?embedded=true">Loading…</iframe>
+      <!-- Updated Exact Google Form Embed -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc47vlVvkxKnGnzSupmYQ54J2FgCIH0PFaGGqk1JGa0KK0bHQ/viewform?embedded=true">Loading…</iframe>
     </div>
   </section>
 
-  <!-- ===== FLOATING INSTAGRAM BUTTON ===== -->
+  <!-- FLOATING INSTAGRAM BUTTON -->
   <a href="https://www.instagram.com/_nextgen_services_?stkn=NXkwdnhyeTlzemJ3" target="_blank" rel="noopener noreferrer" class="floating-ig">
     📷 Contact on Instagram
   </a>
