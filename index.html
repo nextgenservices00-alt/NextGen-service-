@@ -3,527 +3,439 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="google-site-verification" content="3j1OXqgVDgtTzeqWB-snXsNRdWnTMCrtsC-OFqEaKRI" />
-  <title>NextGen Service | Teen Consultancy & MUN</title>
-  <!-- Google Fonts & FontAwesome Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    :root {
-      --primary: #4f46e5;
-      --primary-hover: #4338ca;
-      --secondary: #06b6d4;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --card-bg: rgba(255, 255, 255, 0.9);
-      --text: #334155;
-    }
 
+  <!-- Site Canonical URL for Google Search Console -->
+  <link rel="canonical" href="https://nextgenservices00-alt.github.io/NextGen-service-/" />
+
+  <!-- Google Search Console Verification Meta Tag -->
+  <meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE" />
+
+  <title>NextGen Service | Teen Consultancy & MUN</title>
+  
+  <!-- Favicon (Browser Tab Logo) -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: #f1f5f9;
-      color: var(--text);
+      background-color: #0f172a;
+      color: #f8fafc;
       line-height: 1.6;
     }
 
-    /* Navbar */
+    /* ===== NAVBAR ===== */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(12px);
-      padding: 1rem 5%;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #fff;
-      text-decoration: none;
+    .logo-container {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      text-decoration: none;
     }
 
-    .logo span {
-      color: var(--secondary);
+    .logo-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b82f6;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      color: #3b82f6;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
     }
 
     .nav-btn {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 0.6rem 1.4rem;
-      border-radius: 30px;
-      text-decoration: none;
+      background: #2563eb;
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: 6px;
       font-weight: 600;
       transition: 0.3s;
-      box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
     }
 
     .nav-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+      background: #1d4ed8;
     }
 
-    /* Hero Section */
+    /* ===== HERO SECTION ===== */
     .hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      color: #fff;
-      padding: 5rem 5% 4rem;
+      padding: 80px 20px 60px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .badge {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 0.4rem 1.2rem;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--secondary);
-      display: inline-block;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: #94a3b8;
-      max-width: 650px;
-      margin: 0 auto 2rem;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      padding: 0.8rem 1.8rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      padding: 0.8rem 1.8rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: 0.3s;
-    }
-
-    /* Stats Bar */
-    .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: -2.5rem auto 3rem;
-      padding: 0 5%;
-      position: relative;
-      z-index: 10;
-    }
-
-    .stat-card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .stat-card h3 {
-      font-size: 1.8rem;
-      color: var(--primary);
-      font-weight: 800;
-    }
-
-    .stat-card p {
-      font-size: 0.85rem;
-      color: #64748b;
-      font-weight: 600;
-    }
-
-    /* Section Headers */
-    .section-title {
-      text-align: center;
-      margin: 3rem 0 2rem;
-      padding: 0 5%;
-    }
-
-    .section-title h2 {
-      font-size: 2.2rem;
-      color: var(--dark);
-      font-weight: 800;
-    }
-
-    .section-title p {
-      color: #64748b;
-    }
-
-    /* Services Grid */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      padding: 0 5%;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
-    .card {
-      background: #fff;
+    .hero-badge {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.1);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 6px 16px;
       border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-      border: 1px solid #e2e8f0;
-      transition: 0.3s;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      border-color: var(--primary);
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #60a5fa, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    /* ===== CORE PILLARS ===== */
+    .pillars {
+      padding: 60px 20px;
+      background: #1e293b;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+
+    .grid-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #0f172a;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #334155;
     }
 
     .card-icon {
-      width: 50px;
-      height: 50px;
-      background: #eef2ff;
-      color: var(--primary);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1.2rem;
+      font-size: 28px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: var(--dark);
+      font-size: 20px;
+      color: #60a5fa;
+      margin-bottom: 10px;
     }
 
     .card p {
-      font-size: 0.9rem;
-      color: #64748b;
-      margin-bottom: 1.5rem;
-    }
-
-    .price {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 1.2rem;
-    }
-
-    .card-btn {
-      display: block;
-      text-align: center;
-      background: var(--dark);
-      color: #fff;
-      padding: 0.7rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .card-btn:hover {
-      background: var(--primary);
-    }
-
-    /* FAQ Section */
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto 4rem;
-      padding: 0 5%;
-    }
-
-    .faq-item {
-      background: #fff;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      padding: 1.2rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--dark);
-    }
-
-    .faq-answer {
-      padding: 0 1.2rem 1.2rem;
-      color: #64748b;
-      font-size: 0.95rem;
-      display: none;
-    }
-
-    /* Floating Instagram Button */
-    .insta-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      color: #fff;
-      width: 60px;
-      height: 60px;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 32px;
-      box-shadow: 0 5px 20px rgba(220, 39, 67, 0.4);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .insta-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 25px rgba(220, 39, 67, 0.6);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--dark);
       color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* ===== FOUNDER SECTION ===== */
+    .founder {
+      padding: 70px 20px;
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
-      padding: 3rem 5%;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    footer p {
-      font-size: 0.9rem;
+    .founder-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid #3b82f6;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
     }
 
-    /* Registration Section */
-    .form-section {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 0 5%;
+    .founder h3 {
+      font-size: 22px;
+      font-weight: 700;
     }
 
-    .form-card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    .founder-title {
+      color: #3b82f6;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .founder-quote {
+      color: #cbd5e1;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faqs {
+      padding: 60px 20px;
+      background: #1e293b;
+    }
+
+    .faq-container {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: #0f172a;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #334155;
+      cursor: pointer;
+    }
+
+    summary {
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* ===== ENROLLMENT FORM ===== */
+    .enroll {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .form-box {
+      max-width: 750px;
+      margin: 20px auto 0;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #334155;
     }
 
     iframe {
       width: 100%;
-      height: 800px;
+      height: 600px;
       border: none;
-      border-radius: 12px;
+      border-radius: 8px;
+    }
+
+    /* ===== FLOATING INSTAGRAM BUTTON ===== */
+    .floating-ig {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+
+    .floating-ig:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav { display: none; }
+      .hero h1 { font-size: 30px; }
+      .hero p { font-size: 15px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header / Navbar -->
+  <!-- ===== NAVBAR WITH LOGO ===== -->
   <header>
-    <a href="#" class="logo">NextGen<span>Service</span></a>
-    <a href="#register" class="nav-btn">Enroll Now</a>
+    <a href="https://nextgenservices00-alt.github.io/NextGen-service-/" class="logo-container">
+      <img src="logo.png" alt="NextGen Logo" class="logo-img">
+      <div class="logo-text">NextGen <span>Service</span></div>
+    </a>
+    
+    <nav>
+      <a href="https://nextgenservices00-alt.github.io/NextGen-service-/">Home</a>
+      <a href="#services">Services</a>
+      <a href="#founder">About Founder</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#enroll" class="nav-btn">Enroll Now</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
-    <div class="badge">🚀 Founded by Shreyash Dutta</div>
-    <h1>Empowering Teenagers for Career, Growth & Diplomacy</h1>
-    <p>Personalized mentorship, academic & skill guidance, and high-impact Model United Nations (MUN) experiences designed specifically for youth.</p>
-    <div class="hero-btns">
-      <a href="#services" class="btn-primary">Explore Services</a>
-      <a href="#register" class="btn-secondary">Register for MUN</a>
-    </div>
+    <div class="hero-badge">🚀 Teen Consultancy & MUN Platform</div>
+    <h1>Empowering Teenagers to <span>Lead, Speak, & Excel</span></h1>
+    <p>Personalized mentorship, career direction, and world-class Model United Nations training built for high school & college students.</p>
+    <a href="#enroll" class="cta-btn">Get Started Today</a>
   </section>
 
-  <!-- Impact Stats -->
-  <div class="stats-bar">
-    <div class="stat-card">
-      <h3>100+</h3>
-      <p>Youth Mentored</p>
-    </div>
-    <div class="stat-card">
-      <h3>4</h3>
-      <p>MUN Committees</p>
-    </div>
-    <div class="stat-card">
-      <h3>1-on-1</h3>
-      <p>Personal Guidance</p>
-    </div>
-  </div>
-
-  <!-- Services Section -->
-  <section id="services">
-    <div class="section-title">
-      <h2>Our Core Services</h2>
-      <p>Choose the guidance or event tailored to your personal goals</p>
-    </div>
-
+  <!-- ===== CORE PILLARS ===== -->
+  <section class="pillars" id="services">
+    <h2 class="section-title">Why Choose NextGen Service?</h2>
+    <p class="section-subtitle">Real skills, practical exposure, and personalized guidance.</p>
+    
     <div class="grid-container">
-      <!-- Service 1 -->
       <div class="card">
-        <div>
-          <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h3>Career & Academics</h3>
-          <p>Stream selection, exam preparation tactics, and high school trajectory planning.</p>
-        </div>
-        <div>
-          <div class="price">₹499</div>
-          <a href="#register" class="card-btn">Enroll Now</a>
-        </div>
+        <div class="card-icon">🎯</div>
+        <h3>1-on-1 Mentorship</h3>
+        <p>Personalized guidance tailored to your career aspirations, academics, and skill development needs.</p>
       </div>
 
-      <!-- Service 2 -->
       <div class="card">
-        <div>
-          <div class="card-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-          <h3>Personal Mentorship</h3>
-          <p>Direct 1-on-1 problem solving for stress, habit building, and clarity.</p>
-        </div>
-        <div>
-          <div class="price">₹799</div>
-          <a href="#register" class="card-btn">Enroll Now</a>
-        </div>
+        <div class="card-icon">🏛️</div>
+        <h3>MUN Training & Hosting</h3>
+        <p>Master Rules of Procedure, position paper drafting, public speaking, and diplomacy from experienced delegates.</p>
       </div>
 
-      <!-- Service 3 -->
       <div class="card">
-        <div>
-          <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <h3>Skill Development</h3>
-          <p>Public speaking, communication, leadership, and portfolio building.</p>
-        </div>
-        <div>
-          <div class="price">₹599</div>
-          <a href="#register" class="card-btn">Enroll Now</a>
-        </div>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="card" style="border: 2px solid var(--primary);">
-        <div>
-          <div class="card-icon"><i class="fa-solid fa-landmark"></i></div>
-          <h3>NextGen MUN</h3>
-          <p>Participate in UNICEF, UNGA-DISEC, AIPPM, or IP committees to master diplomacy.</p>
-        </div>
-        <div>
-          <div class="price">₹299</div>
-          <a href="#register" class="card-btn" style="background: var(--primary);">Register Delegate</a>
-        </div>
+        <div class="card-icon">💡</div>
+        <h3>Skill First Approach</h3>
+        <p>Practical workshops focused on real-world communication, critical thinking, and leadership development.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section style="margin-top: 4rem;">
-    <div class="section-title">
-      <h2>Frequently Asked Questions</h2>
-      <p>Got questions? We've got answers.</p>
-    </div>
+  <!-- ===== FOUNDER SPOTLIGHT ===== -->
+  <section class="founder" id="founder">
+    <img src="logo.png" alt="Shreyash Dutta" class="founder-img">
+    <h3>Shreyash Dutta</h3>
+    <div class="founder-title">Founder & Lead Mentor, NextGen Service</div>
+    <p class="founder-quote">
+      "NextGen Service was created with a clear vision: to empower teenagers with real-world skills, confidence, and leadership opportunities through structured mentorship and MUN events."
+    </p>
+  </section>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faqs" id="faqs">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Got questions? We've got answers.</p>
 
     <div class="faq-container">
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          What happens after I register? <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          Our team will reach out to you within 24 hours to confirm your registration and share session schedules or MUN committee allocations.
-        </div>
-      </div>
+      <details>
+        <summary>What is NextGen Service all about?</summary>
+        <p>NextGen Service provides mentorship, skill development, career guidance, and Model United Nations (MUN) training specifically curated for teenagers and students.</p>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Is NextGen MUN suitable for complete beginners? <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          Yes! We offer beginner-friendly committees like UNICEF and provide orientation materials so first-time delegates feel confident.
-        </div>
-      </div>
+      <details>
+        <summary>Can beginners join NextGen MUN workshops?</summary>
+        <p>Yes! We have specialized beginner-friendly tracks where we teach rules of procedure, research methods, and public speaking from scratch.</p>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          How are 1-on-1 Mentorship sessions conducted? <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          Mentorship sessions take place via Google Meet or Phone Call at a scheduled time that suits your study routine.
-        </div>
-      </div>
+      <details>
+        <summary>How can I enroll in mentorship?</summary>
+        <p>Simply scroll down to the enrollment form below, fill in your details, and our team will get in touch with you within 24 hours.</p>
+      </details>
     </div>
   </section>
 
-  <!-- Google Form Embedded Section -->
-  <section id="register" class="form-section">
-    <div class="section-title">
-      <h2>Registration Portal</h2>
-      <p>Fill out the form below to confirm your spot</p>
-    </div>
-    <div class="form-card">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc47vlVvkxKnGnzSupmYQ54J2FgCIH0PFaGGqk1JGa0KK0bHQ/viewform?usp=header">Loading…</iframe>
+  <!-- ===== ENROLLMENT FORM SECTION ===== -->
+  <section class="enroll" id="enroll">
+    <h2 class="section-title">Start Your Journey</h2>
+    <p class="section-subtitle">Fill out the enrollment form below to get connected with us.</p>
+    
+    <div class="form-box">
+      <!-- Google Form Embed -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScX0Y6I7kS2jS8Xo5J0e44E-2l3L1R0G4M/viewform?embedded=true">Loading…</iframe>
     </div>
   </section>
 
-  <!-- Floating Instagram Button -->
-  <a href="https://instagram.com/https://www.instagram.com/_nextgen_services_?stkn=NXkwdnhyeTlzemJ3" class="insta-float" target="_blank" title="Follow us on Instagram">
-    <i class="fa-brands fa-instagram"></i>
+  <!-- ===== FLOATING INSTAGRAM BUTTON ===== -->
+  <a href="https://www.instagram.com/_nextgen_services_?stkn=NXkwdnhyeTlzemJ3" target="_blank" rel="noopener noreferrer" class="floating-ig">
+    📷 Contact on Instagram
   </a>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 NextGen Service. All Rights Reserved. Founded by Shreyash Dutta.</p>
-  </footer>
-
-  <script>
-    function toggleFaq(element) {
-      const answer = element.nextElementSibling;
-      const isVisible = answer.style.display === "block";
-      document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none');
-      answer.style.display = isVisible ? "none" : "block";
-    }
-  </script>
 </body>
 </html>
-
