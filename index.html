@@ -12,6 +12,8 @@
 
   <title>NextGen Service | Teen Consultancy & MUN</title>
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +61,7 @@
       height: 40px;
       border-radius: 50%;
       object-fit: cover;
+      border: 1px solid #cbd5e1;
     }
 
     .logo-text {
@@ -168,16 +171,25 @@
       max-width: 700px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
     }
 
     .team-card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
-      padding: 20px;
+      padding: 24px;
       border-radius: 8px;
       text-align: center;
+    }
+
+    .team-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 14px;
+      border: 2px solid #2563eb;
     }
 
     .team-card h3 {
@@ -339,14 +351,18 @@
       <p>NextGen Service is dedicated to helping young students and teenagers discover their true potential. We specialize in personalized 1-on-1 mentorship, career counseling, and comprehensive Model United Nations (MUN) training to help students build confidence, public speaking skills, and leadership qualities.</p>
     </div>
 
-    <!-- Leadership Team -->
+    <!-- Leadership Team with Photos -->
     <div class="team-grid">
+      <!-- Founder Photo Card -->
       <div class="team-card">
+        <img src="founder.jpg" alt="Shreyash Dutta" class="team-img">
         <h3>Shreyash Dutta</h3>
         <p class="role">Founder & CEO</p>
       </div>
 
+      <!-- COO Photo Card -->
       <div class="team-card">
+        <img src="coo.jpg" alt="Samrat Saha" class="team-img">
         <h3>Samrat Saha</h3>
         <p class="role">COO</p>
       </div>
@@ -371,7 +387,7 @@
         <a href="#enroll" class="plan-btn">Choose Plan</a>
       </div>
 
-      <!-- Plan 2 (MUN Training Pro) -->
+      <!-- Plan 2 (MUN Training Pro - ₹299) -->
       <div class="price-card featured">
         <h3>MUN Training Pro</h3>
         <div class="price">₹299 <span>/ course</span></div>
