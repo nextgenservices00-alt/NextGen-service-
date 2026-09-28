@@ -12,7 +12,7 @@
 
   <title>NextGen Service | Teen Consultancy & MUN</title>
   
-  <!-- Favicon (Browser Tab Logo) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png" />
 
   <!-- Google Fonts -->
@@ -30,7 +30,7 @@
     }
 
     body {
-      background-color: #ffffff;
+      background-color: #f8fafc;
       color: #1e293b;
       line-height: 1.6;
     }
@@ -52,23 +52,21 @@
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
     }
 
     .logo-img {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       object-fit: cover;
-      border: 1px solid #cbd5e1;
     }
 
     .logo-text {
       font-size: 20px;
       font-weight: 800;
       color: #0f172a;
-      letter-spacing: -0.5px;
     }
 
     .logo-text span {
@@ -86,7 +84,6 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      transition: 0.2s;
     }
 
     nav a:hover {
@@ -96,13 +93,9 @@
     .nav-btn {
       background: #2563eb;
       color: #ffffff !important;
-      padding: 8px 18px;
+      padding: 8px 16px;
       border-radius: 6px;
       font-weight: 600;
-    }
-
-    .nav-btn:hover {
-      background: #1d4ed8;
     }
 
     /* ===== HERO SECTION ===== */
@@ -113,23 +106,10 @@
       margin: 0 auto;
     }
 
-    .hero-badge {
-      display: inline-block;
-      background: #eff6ff;
-      color: #2563eb;
-      border: 1px solid #bfdbfe;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
     .hero h1 {
-      font-size: 38px;
+      font-size: 36px;
       font-weight: 800;
       color: #0f172a;
-      line-height: 1.25;
       margin-bottom: 16px;
     }
 
@@ -138,7 +118,7 @@
     }
 
     .hero p {
-      font-size: 17px;
+      font-size: 16px;
       color: #64748b;
       margin-bottom: 24px;
     }
@@ -152,19 +132,14 @@
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
-      transition: 0.2s;
     }
 
-    .cta-btn:hover {
-      background: #1d4ed8;
-    }
-
-    /* ===== SERVICES ===== */
-    .services {
+    /* ===== PRICING SECTION ===== */
+    .pricing {
       padding: 50px 20px;
-      background: #f8fafc;
-      border-top: 1px solid #f1f5f9;
-      border-bottom: 1px solid #f1f5f9;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
     }
 
     .section-title {
@@ -178,85 +153,77 @@
     .section-subtitle {
       text-align: center;
       color: #64748b;
-      font-size: 15px;
+      font-size: 14px;
       margin-bottom: 32px;
     }
 
-    .grid-container {
-      max-width: 1000px;
+    .pricing-grid {
+      max-width: 900px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    .card {
-      background: #ffffff;
-      padding: 24px;
+    .price-card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
       border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      padding: 24px;
+      text-align: center;
     }
 
-    .card-icon {
-      font-size: 26px;
-      margin-bottom: 12px;
+    .price-card.featured {
+      border: 2px solid #2563eb;
+      background: #ffffff;
     }
 
-    .card h3 {
+    .price-card h3 {
       font-size: 18px;
       color: #0f172a;
       margin-bottom: 8px;
     }
 
-    .card p {
-      color: #64748b;
-      font-size: 14px;
-    }
-
-    /* ===== FOUNDER ===== */
-    .founder {
-      padding: 50px 20px;
-      max-width: 750px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .founder-img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 16px;
-      border: 2px solid #2563eb;
-    }
-
-    .founder h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #0f172a;
-    }
-
-    .founder-title {
+    .price {
+      font-size: 32px;
+      font-weight: 800;
       color: #2563eb;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
-    .founder-quote {
+    .price span {
+      font-size: 14px;
+      color: #64748b;
+      font-weight: 400;
+    }
+
+    .features-list {
+      list-style: none;
+      text-align: left;
+      font-size: 14px;
       color: #475569;
-      font-style: italic;
-      font-size: 15px;
-      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .features-list li {
+      margin-bottom: 8px;
+    }
+
+    .plan-btn {
+      display: block;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
     }
 
     /* ===== ENROLLMENT FORM ===== */
     .enroll {
       padding: 50px 20px;
-      background: #f8fafc;
       text-align: center;
-      border-top: 1px solid #f1f5f9;
     }
 
     .form-box {
@@ -308,54 +275,60 @@
     
     <nav>
       <a href="https://nextgenservices00-alt.github.io/NextGen-service-/">Home</a>
-      <a href="#services">Services</a>
-      <a href="#founder">About Founder</a>
+      <a href="#pricing">Pricing</a>
       <a href="#enroll" class="nav-btn">Enroll Now</a>
     </nav>
   </header>
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-badge">🚀 Teen Consultancy & MUN Platform</div>
     <h1>Empowering Teenagers to <span>Lead, Speak, & Excel</span></h1>
     <p>Personalized mentorship, career direction, and world-class Model United Nations training built for high school & college students.</p>
-    <a href="#enroll" class="cta-btn">Get Started Today</a>
+    <a href="#pricing" class="cta-btn">View Pricing Plans</a>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <h2 class="section-title">Why Choose NextGen Service?</h2>
-    <p class="section-subtitle">Real skills, practical exposure, and personalized guidance.</p>
-    
-    <div class="grid-container">
-      <div class="card">
-        <div class="card-icon">🎯</div>
-        <h3>1-on-1 Mentorship</h3>
-        <p>Personalized guidance tailored to your career aspirations, academics, and skill development needs.</p>
+  <!-- PRICING SECTION -->
+  <section class="pricing" id="pricing">
+    <h2 class="section-title">Affordable Plans for Students</h2>
+    <p class="section-subtitle">Pocket-friendly pricing designed to give you real practical guidance.</p>
+
+    <div class="pricing-grid">
+      <!-- Plan 1 -->
+      <div class="price-card">
+        <h3>Starter Session</h3>
+        <div class="price">₹99 <span>/ session</span></div>
+        <ul class="features-list">
+          <li>✓ 1-on-1 Guidance Session</li>
+          <li>✓ Basic Academic/Career Help</li>
+          <li>✓ Q&A Session</li>
+        </ul>
+        <a href="#enroll" class="plan-btn">Choose Plan</a>
       </div>
 
-      <div class="card">
-        <div class="card-icon">🏛️</div>
-        <h3>MUN Training & Hosting</h3>
-        <p>Master Rules of Procedure, position paper drafting, public speaking, and diplomacy from experienced delegates.</p>
+      <!-- Plan 2 (MUN Training - Updated to ₹299) -->
+      <div class="price-card featured">
+        <h3>MUN Training Pro</h3>
+        <div class="price">₹299 <span>/ course</span></div>
+        <ul class="features-list">
+          <li>✓ Complete MUN Rules Training</li>
+          <li>✓ Position Paper Guidance</li>
+          <li>✓ Public Speaking Tips</li>
+        </ul>
+        <a href="#enroll" class="plan-btn">Choose Plan</a>
       </div>
 
-      <div class="card">
-        <div class="card-icon">💡</div>
-        <h3>Skill First Approach</h3>
-        <p>Practical workshops focused on real-world communication, critical thinking, and leadership development.</p>
+      <!-- Plan 3 -->
+      <div class="price-card">
+        <h3>Complete Mentorship</h3>
+        <div class="price">₹499 <span>/ month</span></div>
+        <ul class="features-list">
+          <li>✓ Full Month 1-on-1 Mentorship</li>
+          <li>✓ Skill Development Guidance</li>
+          <li>✓ Priority Support on WhatsApp</li>
+        </ul>
+        <a href="#enroll" class="plan-btn">Choose Plan</a>
       </div>
     </div>
-  </section>
-
-  <!-- FOUNDER SECTION -->
-  <section class="founder" id="founder">
-    <img src="logo.png" alt="Shreyash Dutta" class="founder-img">
-    <h3>Shreyash Dutta</h3>
-    <div class="founder-title">Founder & Lead Mentor, NextGen Service</div>
-    <p class="founder-quote">
-      "NextGen Service was created with a clear vision: to empower teenagers with real-world skills, confidence, and leadership opportunities through structured mentorship and MUN events."
-    </p>
   </section>
 
   <!-- ENROLLMENT FORM SECTION -->
@@ -364,7 +337,7 @@
     <p class="section-subtitle">Fill out the enrollment form below to get connected with us.</p>
     
     <div class="form-box">
-      <!-- Updated Exact Google Form Embed -->
+      <!-- Exact Google Form Embed -->
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc47vlVvkxKnGnzSupmYQ54J2FgCIH0PFaGGqk1JGa0KK0bHQ/viewform?embedded=true">Loading…</iframe>
     </div>
   </section>
