@@ -134,8 +134,8 @@
       font-weight: 600;
     }
 
-    /* ===== PRICING SECTION ===== */
-    .pricing {
+    /* ===== ABOUT SECTION ===== */
+    .about {
       padding: 50px 20px;
       background: #ffffff;
       border-top: 1px solid #e2e8f0;
@@ -157,6 +157,50 @@
       margin-bottom: 32px;
     }
 
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: #475569;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .team-grid {
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .team-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .team-card h3 {
+      font-size: 18px;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .team-card .role {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ===== PRICING SECTION ===== */
+    .pricing {
+      padding: 50px 20px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
     .pricing-grid {
       max-width: 900px;
       margin: 0 auto;
@@ -166,7 +210,7 @@
     }
 
     .price-card {
-      background: #f8fafc;
+      background: #ffffff;
       border: 1px solid #cbd5e1;
       border-radius: 8px;
       padding: 24px;
@@ -175,7 +219,6 @@
 
     .price-card.featured {
       border: 2px solid #2563eb;
-      background: #ffffff;
     }
 
     .price-card h3 {
@@ -223,6 +266,7 @@
     /* ===== ENROLLMENT FORM ===== */
     .enroll {
       padding: 50px 20px;
+      background: #ffffff;
       text-align: center;
     }
 
@@ -275,6 +319,7 @@
     
     <nav>
       <a href="https://nextgenservices00-alt.github.io/NextGen-service-/">Home</a>
+      <a href="#about">About Us</a>
       <a href="#pricing">Pricing</a>
       <a href="#enroll" class="nav-btn">Enroll Now</a>
     </nav>
@@ -285,6 +330,29 @@
     <h1>Empowering Teenagers to <span>Lead, Speak, & Excel</span></h1>
     <p>Personalized mentorship, career direction, and world-class Model United Nations training built for high school & college students.</p>
     <a href="#pricing" class="cta-btn">View Pricing Plans</a>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <h2 class="section-title">About NextGen Service</h2>
+    <p class="section-subtitle">Empowering the leaders of tomorrow with real-world guidance.</p>
+
+    <div class="about-content">
+      <p>NextGen Service is dedicated to helping young students and teenagers discover their true potential. We specialize in personalized 1-on-1 mentorship, career counseling, and comprehensive Model United Nations (MUN) training to help students build confidence, public speaking skills, and leadership qualities.</p>
+    </div>
+
+    <!-- Leadership Team -->
+    <div class="team-grid">
+      <div class="team-card">
+        <h3>Shreyash Dutta</h3>
+        <p class="role">Founder & CEO</p>
+      </div>
+
+      <div class="team-card">
+        <h3>Samrat Saha</h3>
+        <p class="role">COO</p>
+      </div>
+    </div>
   </section>
 
   <!-- PRICING SECTION -->
@@ -305,7 +373,7 @@
         <a href="#enroll" class="plan-btn">Choose Plan</a>
       </div>
 
-      <!-- Plan 2 (MUN Training - Updated to ₹299) -->
+      <!-- Plan 2 (MUN Training Pro) -->
       <div class="price-card featured">
         <h3>MUN Training Pro</h3>
         <div class="price">₹299 <span>/ course</span></div>
@@ -337,7 +405,7 @@
     <p class="section-subtitle">Fill out the enrollment form below to get connected with us.</p>
     
     <div class="form-box">
-      <!-- Exact Google Form Embed -->
+      <!-- Google Form Embed -->
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc47vlVvkxKnGnzSupmYQ54J2FgCIH0PFaGGqk1JGa0KK0bHQ/viewform?embedded=true">Loading…</iframe>
     </div>
   </section>
