@@ -204,10 +204,74 @@
       font-weight: 600;
     }
 
+    /* ===== MUN CONFERENCE SECTION ===== */
+    .mun-section {
+      padding: 50px 20px;
+      background: #f1f5f9;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .mun-grid {
+      max-width: 900px;
+      margin: 0 auto 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .mun-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .mun-card h3 {
+      font-size: 17px;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+
+    .mun-card p {
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .perks-list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .perk-item {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
     /* ===== PRICING SECTION ===== */
     .pricing {
       padding: 50px 20px;
-      background: #f8fafc;
+      background: #ffffff;
       border-bottom: 1px solid #e2e8f0;
     }
 
@@ -220,7 +284,7 @@
     }
 
     .price-card {
-      background: #ffffff;
+      background: #f8fafc;
       border: 1px solid #cbd5e1;
       border-radius: 8px;
       padding: 24px;
@@ -229,6 +293,7 @@
 
     .price-card.featured {
       border: 2px solid #2563eb;
+      background: #ffffff;
     }
 
     .price-card h3 {
@@ -276,7 +341,7 @@
     /* ===== ENROLLMENT FORM ===== */
     .enroll {
       padding: 50px 20px;
-      background: #ffffff;
+      background: #f8fafc;
       text-align: center;
     }
 
@@ -330,6 +395,7 @@
     <nav>
       <a href="https://nextgenservices00-alt.github.io/NextGen-service-/">Home</a>
       <a href="#about">About Us</a>
+      <a href="#mun">Upcoming MUN</a>
       <a href="#pricing">Pricing</a>
       <a href="#enroll" class="nav-btn">Enroll Now</a>
     </nav>
@@ -366,6 +432,39 @@
         <h3>Samrat Saha</h3>
         <p class="role">COO</p>
       </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING MUN CONFERENCE SECTION -->
+  <section class="mun-section" id="mun">
+    <div style="text-align: center;">
+      <span class="badge">🏛️ Flagship Event</span>
+      <h2 class="section-title">NextGen Model United Nations</h2>
+      <p class="section-subtitle">Organized by NextGen Service for young diplomats and student leaders.</p>
+    </div>
+
+    <div class="mun-grid">
+      <div class="mun-card">
+        <h3>1. UNGA (General Assembly)</h3>
+        <p>Debating international security, disarmament, and global policy frameworks.</p>
+      </div>
+
+      <div class="mun-card">
+        <h3>2. UNHRC (Human Rights Council)</h3>
+        <p>Addressing fundamental human rights protection, global welfare, and advocacy.</p>
+      </div>
+
+      <div class="mun-card">
+        <h3>3. AIPPM (Indian Political Committee)</h3>
+        <p>Focusing on Indian governance, domestic policies, and economic reforms.</p>
+      </div>
+    </div>
+
+    <div class="perks-list">
+      <div class="perk-item">🏆 Best Delegate Awards</div>
+      <div class="perk-item">🏅 High Commendations</div>
+      <div class="perk-item">📜 Official Certificates</div>
+      <div class="perk-item">🎯 Mentorship from EB</div>
     </div>
   </section>
 
@@ -415,8 +514,8 @@
 
   <!-- ENROLLMENT FORM SECTION -->
   <section class="enroll" id="enroll">
-    <h2 class="section-title">Start Your Journey</h2>
-    <p class="section-subtitle">Fill out the enrollment form below to get connected with us.</p>
+    <h2 class="section-title">Start Your Journey / Register</h2>
+    <p class="section-subtitle">Fill out the enrollment form below to get connected or register for MUN.</p>
     
     <div class="form-box">
       <!-- Google Form Embed -->
